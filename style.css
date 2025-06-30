@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(206, 94%, 87%);
+  color: white;
+}
+
+.container {
+  height: auto;
+  width: 100%;
+  max-width: 1000px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+/* Sidebar Styles */
+.side-bar {
+  width: 40%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-image: url(./assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 30px 20px;
+  color: white;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.act {
+  color: hsl(243, 100%, 62%);
+  background-color: hsl(206, 94%, 87%);
+}
+
+.link button:hover {
+  color: hsl(243, 100%, 62%);
+  background-color: hsl(206, 94%, 87%);
+}
+
+.step {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: rgba(213, 213, 213, 0.9);
+}
+
+.step span {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: white;
+}
+
+/* Main Form Styles */
+.main-form {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* for all steps */
+.step-one,
+.step-two,
+.step-three,
+.step-four {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* STEP 1: Personal Info Form Styles */
+.step-five {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  background-color: white;
+  color: black;
+  padding: 40px;
+}
+
+.step-five img {
+  width: 100px;
+}
+
+.step-five p {
+  color: hsl(231, 11%, 63%);
+}
+
+.step-one p {
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 2rem;
+}
+
+.step-one h1 {
+  color: black;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  border-color: hsl(243, 100%, 62%);
+  outline: none;
+}
+
+.error {
+  display: none;
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+/* STEP 2: Plan Selection Styles */
+.step-two h1 {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.5rem;
+}
+
+.step-two p {
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 2rem;
+}
+
+.plan-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.plan {
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 33%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+
+.plan img {
+  margin-bottom: 1rem;
+  width: 40px;
+  height: 40px;
+}
+
+.plan h3 {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.5rem;
+}
+
+.plan p {
+  color: hsl(231, 11%, 63%);
+  margin: 0;
+}
+
+.billing-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(217, 100%, 97%);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.billing-toggle span {
+  color: hsl(231, 11%, 63%);
+  font-weight: bold;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
