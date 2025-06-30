@@ -1,342 +1,306 @@
-/* STEP 3: Add-ons Styles */
-.step-three h1 {
-  color: hsl(213, 96%, 18%);
-  margin-bottom: 0.5rem;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.step-three p {
-  color: hsl(231, 11%, 63%);
-  margin-bottom: 2rem;
-}
-
-.addon-option {
-  border: 1px solid hsl(229, 24%, 87%);
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+body {
+  font-family: 'Ubuntu', sans-serif;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
-}
-
-.addon-option:hover {
-  border-color: hsl(243, 100%, 62%);
-}
-
-.addon-option input {
-  margin-right: 1rem;
-  width: 20px;
-  height: 20px;
-}
-
-.addon-option label {
-  flex-grow: 1;
-  cursor: pointer;
-}
-
-.addon-option h3 {
-  color: hsl(213, 96%, 18%);
-  margin-bottom: 0.25rem;
-}
-
-.addon-option p {
-  color: hsl(231, 11%, 63%);
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.addon-option span {
-  color: hsl(243, 100%, 62%);
-}
-
-/* STEP 4: Summary Styles */
-.step-four h1 {
-  color: hsl(213, 96%, 18%);
-  margin-bottom: 0.5rem;
-}
-
-.step-four p {
-  color: hsl(231, 11%, 63%);
-  margin-bottom: 2rem;
-}
-
-.summary {
-  background-color: hsl(217, 100%, 97%);
-  border-radius: 8px;
-  padding: 1.5rem;
-}
-
-.plan-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid hsl(229, 24%, 87%);
-}
-
-.plan-summary h3 {
-  color: hsl(213, 96%, 18%);
-  margin: 0;
-}
-
-.plan-summary p {
-  color: hsl(213, 96%, 18%);
-  margin: 0;
-  font-weight: bold;
-}
-
-.addons-summary {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-}
-
-.addons-summary p {
-  color: hsl(231, 11%, 63%);
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.addons-summary span {
-  color: hsl(213, 96%, 18%);
-  font-size: 0.9rem;
-}
-
-.total {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1.5rem;
-  padding: 0 1.5rem;
-}
-
-.total p {
-  color: hsl(231, 11%, 63%);
-  margin: 0;
-}
-
-.total span {
-  color: hsl(243, 100%, 62%);
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-/* Navigation Buttons */
-.button-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 4rem;
-}
-
-.next-btn,
-.back-btn,
-.confirm-btn {
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.next-btn,
-.confirm-btn {
-  background-color: hsl(213, 96%, 18%);
+  min-height: 100vh;
+  background-color: hsl(206, 94%, 87%);
   color: white;
 }
 
-.back-btn {
-  background-color: transparent;
-  color: hsl(231, 11%, 63%);
+.container {
+  height: auto;
+  width: 100%;
+  max-width: 1000px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin: 20px;
 }
 
-.back-btn:hover {
+/* Sidebar Styles */
+.side-bar {
+  width: 40%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-image: url(./assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 30px 20px;
+  color: white;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 10px 15px;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.act {
+  color: hsl(243, 100%, 62%);
+  background-color: hsl(206, 94%, 87%);
+}
+
+.link button:hover {
+  color: hsl(243, 100%, 62%);
+  background-color: hsl(206, 94%, 87%);
+}
+
+.step {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: rgba(213, 213, 213, 0.9);
+}
+
+.step span {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: white;
+}
+
+/* Main Form Styles */
+.main-form {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* for all steps */
+.step-one,
+.step-two,
+.step-three,
+.step-four {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* STEP 1: Personal Info Form Styles */
+.step-five {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  background-color: white;
+  color: black;
+  padding: 40px;
+}
+
+.step-five img {
+  width: 100px;
+}
+
+.step-five p {
+  color: hsl(231, 11%, 63%);
+  line-height: 1.6;
+}
+
+.step-one p {
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 2rem;
+}
+
+.step-one h1 {
   color: hsl(213, 96%, 18%);
 }
 
-.next-btn:hover,
-.confirm-btn:hover {
-  background-color: hsl(243, 100%, 62%);
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-/* Active button style */
-.btn.active {
-  background-color: hsl(206, 94%, 87%);
-  color: hsl(243, 100%, 62%);
+.form-group label {
+  display: block;
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-group input:focus {
+  border-color: hsl(243, 100%, 62%);
+  outline: none;
+}
+
+.error {
+  display: none;
+  color: hsl(354, 84%, 57%);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  position: absolute;
+  right: 0;
+  font-weight: 500;
+}
+
+/* STEP 2: Plan Selection Styles */
+.step-two h1 {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.5rem;
+}
+
+.step-two p {
+  color: hsl(231, 11%, 63%);
+  margin-bottom: 2rem;
+}
+
+.plan-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.plan {
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 33%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan:hover {
   border-color: hsl(243, 100%, 62%);
 }
 
-/* If you want smooth transitions */
-.main-form > div {
-  transition: opacity 0.3s ease;
+.plan.selected {
+  border-color: hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 90%;
-  }
-
-  .side-bar {
-    width: 100%;
-    min-height: auto;
-    height: 180px;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    background-image: url(./assets/images/bg-sidebar-mobile.svg);
-    background-size: cover;
-    border-radius: 8px;
-    padding: 30px 20px;
-  }
-
-  .link {
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    gap: 8px;
-  }
-
-  .step {
-    display: none;
-  }
-
-  .main-form {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .plan-options {
-    flex-wrap: wrap;
-  }
-
-  .plan {
-    width: 48%;
-  }
+.plan img {
+  margin-bottom: 2rem;
+  width: 40px;
+  height: 40px;
 }
 
-@media (max-width: 768px) {
-  body {
-    background-color: white;
-    justify-content: flex-start;
-  }
-
-  .container {
-    margin: 0;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .side-bar {
-    border-radius: 0;
-  }
-
-  .main-form {
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    margin-top: -50px;
-    width: 90%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .button-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    padding: 15px;
-    margin-top: 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  }
+.plan h3 {
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .plan-options {
-    flex-direction: column;
-  }
-
-  .plan {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .plan img {
-    margin-bottom: 0;
-  }
-
-  .billing-toggle {
-    flex-direction: row;
-    gap: 1rem;
-  }
-
-  .addon-option {
-    padding: 0.8rem;
-  }
-
-  .summary {
-    padding: 1rem;
-  }
-
-  .total {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    padding: 0;
-  }
-
-  .next-btn,
-  .back-btn,
-  .confirm-btn {
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .step-five {
-    padding: 20px;
-  }
-
-  .step-five img {
-    width: 80px;
-  }
+.plan p.price {
+  color: hsl(231, 11%, 63%);
+  margin: 0;
+  font-weight: 500;
 }
 
-@media (max-width: 480px) {
-  .main-form {
-    width: 95%;
-    padding: 15px;
-  }
-
-  .form-group input {
-    padding: 0.7rem;
-  }
-
-  .plan {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
-
-  .addon-option {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .addon-option input {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
-
-  .button-container {
-    padding: 10px;
-  }
+.plan p.yearly-discount {
+  color: hsl(213, 96%, 18%);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  display: none;
 }
+
+.billing-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(217, 100%, 97%);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.billing-toggle span {
+  color: hsl(231, 11%, 63%);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.billing-toggle span.active {
+  color: hsl(213, 96%, 18%);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
